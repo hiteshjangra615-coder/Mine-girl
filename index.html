@@ -2875,7 +2875,7 @@ document.addEventListener('click',function(e){var t=e.target;if(!t||!t.closest)r
  var r=t.closest('.rs-card');if(r){if(!r.classList.contains('on')){r.classList.add('on');burst(['💗','✨','💖'],8,'up');}
    var all=document.querySelectorAll('.rs-card'),on=document.querySelectorAll('.rs-card.on'),ct=document.getElementById('rsCount');
    if(ct)ct.textContent=on.length+' / '+all.length+' wajahein mili ✨';
-   if(all.length&&on.length===all.length){var b=document.getElementById('rsBonus');if(b&&b.hidden){b.hidden=false;burst(['💗','🎁','✨','💖','🖤'],26,'up');if(typeof confetti==='function'){try{confetti(30);}catch(_){}}}}return;}
+   if(all.length&&on.length===all.length){var b=document.getElementById('rsBonus');if(b&&b.hidden){b.hidden=false;burst(['💗','🎁','✨','💖','🖤'],26,'up');if(typeof confetti==='function'){try{confetti(30);}catch(_){}}setTimeout(function(){try{var r=b.getBoundingClientRect(),y=window.scrollY+r.top-Math.max(16,(window.innerHeight-r.height)/2);window.scrollTo({top:Math.max(0,y),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}catch(_){try{b.scrollIntoView({behavior:'smooth',block:'center'});}catch(__){}}},450);}}return;}
  var pc=t.closest('.plan-chip');if(pc){pc.classList.toggle('on');var n=document.querySelectorAll('.plan-chip.on').length;
    var pcnt=document.getElementById('planCount');if(pcnt)pcnt.textContent='Wishlist me abhi '+n+' cheezein 💗';
    var sb=document.getElementById('planSend');if(sb)sb.disabled=n===0;if(pc.classList.contains('on'))burst(['🚗','✨','💗'],5,'up');return;}
